@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 
 from game import Game, SIZES
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="", static_folder="../frontend")
 game = Game(3)
 
 @app.route("/")
