@@ -23,8 +23,8 @@ class Game:
         if self.status != "in progress":
             raise TurnException("A játék véget ért. Kezdj egy új játékot!", 409)
 
-        if (not isinstance(row, int) or not isinstance(column, int)
-                or not (0 <= row < self.size) and not (0 <= column < self.size)):
+        if (not isinstance(row, int) or isinstance(row, bool) or not isinstance(column, int) or isinstance(column, bool)
+                or not (0 <= row < self.size) or not (0 <= column < self.size)):
             raise TurnException("Érvénytelen mező.", 400)
 
         if self.table[row][column] != "":
@@ -49,7 +49,7 @@ class Game:
             for c in range(self.size):
                 for dr, dc in DIRECTIONS:
                     fields = [(r + i * dr, c + i * dc) for i in range(length)]
-                    if all(0 < wr < self.size and 0 < wc < self.size
+                    if all(0 <= wr < self.size and 0 <= wc < self.size
                            and self.table[wr][wc] == sign for (wr, wc) in fields):
                         return [[wr, wc] for wr, wc in fields]
         return []

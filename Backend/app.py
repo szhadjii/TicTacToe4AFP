@@ -24,7 +24,7 @@ def turn():
     try:
         game.turn(data.get("row"), data.get("col"))
     except TurnException as e:
-        return jsonify({"error": e.message}), e.http_code
+        return jsonify({"error": e.message}, e.http_code)
     return jsonify(game.state())
 
 @app.route("/state", methods=['GET'])
