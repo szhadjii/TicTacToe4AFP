@@ -1,0 +1,16 @@
+# Sorvégek rögzítése fájltípusonként, hogy ne függjön attól, ki milyen
+# gépen (Windows/Mac/Linux) és milyen autocrlf beállítással commitol.
+
+# Windows parancsfájl – CRLF kell neki
+*.bat text eol=crlf
+
+# Unix shell szkript – LF kell neki, CRLF esetén hibát dobhat futtatáskor
+*.sh  text eol=lf
+
+# Python és egyéb szövegfájlok – LF, ez a szokásos a legtöbb eszközzel
+*.py  text eol=lf
+*.md  text eol=lf
+*.txt text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js  text eol=lf

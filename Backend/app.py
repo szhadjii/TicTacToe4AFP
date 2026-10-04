@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from game import Game, SIZES, TurnException
 
-app = Flask(__name__, static_url_path="", static_folder="../frontend")
+app = Flask(__name__, static_url_path="", static_folder="../Frontend")
 game = Game(3)
 
 @app.route("/")
@@ -33,4 +33,4 @@ def state():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
