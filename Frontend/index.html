@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amőba</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Amőba</h1>
+
+    <!-- F-01: táblaméret-választó és Új játék gomb -->
+    <section class="controls">
+      <label for="size-select">Táblaméret</label>
+      <select id="size-select">
+        <option value="3" selected>3×3</option>
+        <option value="5">5×5</option>
+      </select>
+      <button id="new-game-btn" type="button" class="btn">Új játék</button>
+    </section>
+
+    <!-- F-05: soron következő játékos kijelzése -->
+    <p id="status-bar" class="status-bar" aria-live="polite">Betöltés…</p>
+
+    <!-- F-02: játéktábla (a script.js tölti fel) -->
+    <div id="board" class="board" role="grid" aria-label="Amőba játéktábla"></div>
+
+    <!-- F-10: hibaüzenet -->
+    <p id="error-msg" class="error-msg" role="alert" hidden></p>
+
+    <!-- F-09: játék vége, újrajátszás -->
+    <section id="result" class="result" hidden>
+      <p id="result-text" class="result-text"></p>
+      <button id="replay-btn" type="button" class="btn btn-accent">Újrajátszás</button>
+    </section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

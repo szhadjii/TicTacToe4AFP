@@ -1,0 +1,180 @@
+:root {
+  --bg: #f4f1ea;
+  --surface: #ffffff;
+  --text: #25221d;
+  --muted: #7a746a;
+  --line: #d9d3c7;
+  --x: #d1495b;
+  --o: #2e86ab;
+  --accent: #25221d;
+  --win: #ffe9a8;
+  --error-bg: #fde8e8;
+  --error-text: #a61b1b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1b19;
+    --surface: #282622;
+    --text: #f1ede4;
+    --muted: #a39d90;
+    --line: #433f38;
+    --x: #ff7a8a;
+    --o: #6cc3e6;
+    --accent: #f1ede4;
+    --win: #5a4a1a;
+    --error-bg: #4a2222;
+    --error-text: #ffb3b3;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.app {
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.controls label { color: var(--muted); font-size: 0.9rem; }
+
+select, .btn {
+  font: inherit;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.btn { cursor: pointer; font-weight: 600; }
+.btn:hover { border-color: var(--text); }
+.btn:focus-visible, select:focus-visible, .cell:focus-visible {
+  outline: 3px solid var(--o);
+  outline-offset: 2px;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.status-bar {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+  min-height: 1.6em;
+}
+
+.status-bar .mark { font-weight: 800; }
+
+.mark-x { color: var(--x); }
+.mark-o { color: var(--o); }
+
+/* --- Tábla --- */
+.board {
+  --size: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--size), 1fr);
+  gap: 6px;
+  padding: 6px;
+  background: var(--line);
+  border-radius: 12px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 8px;
+  background: var(--surface);
+  font: inherit;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 11vw, 3.4rem);
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text);
+  transition: background 0.12s, transform 0.08s;
+}
+
+.board[data-size="5"] .cell { font-size: clamp(1.3rem, 7.5vw, 2.4rem); }
+
+.cell:hover:not(:disabled):not(.filled) { background: var(--bg); }
+.cell:active:not(:disabled):not(.filled) { transform: scale(0.96); }
+
+.cell.x { color: var(--x); }
+.cell.o { color: var(--o); }
+
+.cell:disabled { cursor: default; }
+.cell.filled { cursor: not-allowed; }
+
+.cell.win {
+  background: var(--win);
+  animation: pop 0.35s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); }
+  60% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* --- Hibaüzenet --- */
+.error-msg {
+  margin: 16px auto 0;
+  padding: 10px 14px;
+  max-width: 420px;
+  border-radius: 8px;
+  background: var(--error-bg);
+  color: var(--error-text);
+  font-size: 0.95rem;
+}
+
+/* --- Játék vége --- */
+.result {
+  margin-top: 18px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.result-text {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+[hidden] { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cell, .cell.win { transition: none; animation: none; }
+}
