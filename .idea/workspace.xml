@@ -1,176 +1,141 @@
-<?xml version="1.0" encoding="UTF-8"?>
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="ALL" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="67d7bfe7-68db-4349-afcd-b7cdd27abbb2" name="Changes" comment="created app.py and app variable" />
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;szhadjii&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/szhadjii/TicTacToe4AFP.git&quot;,
-    &quot;accountId&quot;: &quot;446c42dc-4e64-49bc-8a9e-b5640081f39a&quot;
-  }
-}</component>
-  <component name="NextEditCompletionFeaturesState">
-    <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000004921287033" />
-      <entry key="S60" value="1.001555356103865" />
-      <entry key="M2" value="1.115343549656724" />
-      <entry key="M5" value="3.4355136731198685" />
-      <entry key="M10" value="11.434342164934504" />
-      <entry key="M15" value="23.143043598822903" />
-      <entry key="M30" value="71.97320223004158" />
-      <entry key="H1" value="165.4266562767068" />
-      <entry key="H2" value="272.9928736290367" />
-      <entry key="H4" value="358.8052794202125" />
-      <entry key="D1" value="455.9851150154358" />
-      <entry key="W1" value="475.62970298885244" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.7267629322293647E-139" />
-      <entry key="S5" value="3.8556682232248784E-56" />
-      <entry key="S10" value="2.2592746255379854E-28" />
-      <entry key="S30" value="8.968396549922329E-10" />
-      <entry key="S60" value="4.189519847715605E-5" />
-      <entry key="M2" value="0.009172404676867292" />
-      <entry key="M5" value="0.2594643003528146" />
-      <entry key="M10" value="1.044413362326288" />
-      <entry key="M15" value="2.0258751424849355" />
-      <entry key="M30" value="5.355968288796369" />
-      <entry key="H1" value="10.873899968495932" />
-      <entry key="H2" value="16.86132172131003" />
-      <entry key="H4" value="21.53245580224404" />
-      <entry key="D1" value="26.76621311792738" />
-      <entry key="W1" value="27.819433426029676" />
-    </decayedSelected>
-    <decayedShown>
-      <entry key="MS100" value="0.8467453123625271" />
-      <entry key="MS500" value="0.9672763296139321" />
-      <entry key="S2" value="0.9917167307382933" />
-      <entry key="S5" value="0.9966784222188245" />
-      <entry key="S10" value="0.9983378297043665" />
-      <entry key="S30" value="0.9994461116494229" />
-      <entry key="S60" value="1.0012969529287206" />
-      <entry key="M2" value="1.1236014503356297" />
-      <entry key="M5" value="3.68890866133966" />
-      <entry key="M10" value="12.46716890819098" />
-      <entry key="M15" value="25.153498677993774" />
-      <entry key="M30" value="77.30621544434804" />
-      <entry key="H1" value="176.27490096257384" />
-      <entry key="H2" value="289.8332967500362" />
-      <entry key="H4" value="380.3240798919488" />
-      <entry key="D1" value="482.74844838727427" />
-      <entry key="W1" value="503.44870760066317" />
-    </decayedShown>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3,
-  &quot;fromUser&quot;: false
-}</component>
-  <component name="ProjectId" id="3Jwi53Ds4YcihP4bftnJkslJCEU" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/szhadjii/TicTacToe4AFP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
-  }
-}</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-python-sdk-73a66231627c-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.10968.92" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="67d7bfe7-68db-4349-afcd-b7cdd27abbb2" name="Changes" comment="" />
-      <created>1790578344803</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1790578344803</updated>
-      <workItem from="1790578345810" duration="2023000" />
-      <workItem from="1790594340861" duration="560000" />
-      <workItem from="1790609770243" duration="2715000" />
-      <workItem from="1790750392715" duration="5277000" />
-      <workItem from="1790779181710" duration="611000" />
-      <workItem from="1790781923522" duration="2595000" />
-      <workItem from="1790799257126" duration="574000" />
-      <workItem from="1790922244744" duration="2800000" />
-      <workItem from="1791135899208" duration="2148000" />
-      <workItem from="1791138625194" duration="1126000" />
-      <workItem from="1791173727915" duration="319000" />
-    </task>
-    <task id="LOCAL-00001" summary="created app.py and app variable">
-      <option name="closed" value="true" />
-      <created>1790578857819</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1790578857819</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="created app.py and app variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="created app.py and app variable" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TicTacToe4AFP$app.coverage" NAME="app Coverage Results" MODIFIED="1791138867563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backend" />
-  </component>
+<component name="AutoImportSettings">
+<option name="autoReloadType" value="ALL"/>
+</component>
+<component name="ChangeListManager">
+<list default="true" id="67d7bfe7-68db-4349-afcd-b7cdd27abbb2" name="Changes" comment="created app.py and app variable"/>
+<option name="SHOW_DIALOG" value="false"/>
+<option name="HIGHLIGHT_CONFLICTS" value="true"/>
+<option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false"/>
+<option name="LAST_RESOLUTION" value="IGNORE"/>
+</component>
+<component name="FileTemplateManagerImpl">
+<option name="RECENT_TEMPLATES">
+<list>
+<option value="Python Script"/>
+</list>
+</option>
+</component>
+<component name="Git.Settings">
+<option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$"/>
+</component>
+<component name="GitHubPullRequestSearchHistory">{ "lastFilter": { "state": "OPEN", "assignee": "szhadjii" } }</component>
+<component name="GithubPullRequestsUISettings">{ "selectedUrlAndAccountId": { "url": "https://github.com/szhadjii/TicTacToe4AFP.git", "accountId": "446c42dc-4e64-49bc-8a9e-b5640081f39a" } }</component>
+<component name="NextEditCompletionFeaturesState">
+<decayedCancelled>
+<entry key="MS100" value="1.0"/>
+<entry key="MS500" value="1.0"/>
+<entry key="S2" value="1.0"/>
+<entry key="S5" value="1.0"/>
+<entry key="S10" value="1.0"/>
+<entry key="S30" value="1.0000004921287033"/>
+<entry key="S60" value="1.001555356103865"/>
+<entry key="M2" value="1.115343549656724"/>
+<entry key="M5" value="3.4355136731198685"/>
+<entry key="M10" value="11.434342164934504"/>
+<entry key="M15" value="23.143043598822903"/>
+<entry key="M30" value="71.97320223004158"/>
+<entry key="H1" value="165.4266562767068"/>
+<entry key="H2" value="272.9928736290367"/>
+<entry key="H4" value="358.8052794202125"/>
+<entry key="D1" value="455.9851150154358"/>
+<entry key="W1" value="475.62970298885244"/>
+</decayedCancelled>
+<decayedSelected>
+<entry key="MS100" value="0.0"/>
+<entry key="MS500" value="0.0"/>
+<entry key="S2" value="2.7267629322293647E-139"/>
+<entry key="S5" value="3.8556682232248784E-56"/>
+<entry key="S10" value="2.2592746255379854E-28"/>
+<entry key="S30" value="8.968396549922329E-10"/>
+<entry key="S60" value="4.189519847715605E-5"/>
+<entry key="M2" value="0.009172404676867292"/>
+<entry key="M5" value="0.2594643003528146"/>
+<entry key="M10" value="1.044413362326288"/>
+<entry key="M15" value="2.0258751424849355"/>
+<entry key="M30" value="5.355968288796369"/>
+<entry key="H1" value="10.873899968495932"/>
+<entry key="H2" value="16.86132172131003"/>
+<entry key="H4" value="21.53245580224404"/>
+<entry key="D1" value="26.76621311792738"/>
+<entry key="W1" value="27.819433426029676"/>
+</decayedSelected>
+<decayedShown>
+<entry key="MS100" value="0.8467453123625271"/>
+<entry key="MS500" value="0.9672763296139321"/>
+<entry key="S2" value="0.9917167307382933"/>
+<entry key="S5" value="0.9966784222188245"/>
+<entry key="S10" value="0.9983378297043665"/>
+<entry key="S30" value="0.9994461116494229"/>
+<entry key="S60" value="1.0012969529287206"/>
+<entry key="M2" value="1.1236014503356297"/>
+<entry key="M5" value="3.68890866133966"/>
+<entry key="M10" value="12.46716890819098"/>
+<entry key="M15" value="25.153498677993774"/>
+<entry key="M30" value="77.30621544434804"/>
+<entry key="H1" value="176.27490096257384"/>
+<entry key="H2" value="289.8332967500362"/>
+<entry key="H4" value="380.3240798919488"/>
+<entry key="D1" value="482.74844838727427"/>
+<entry key="W1" value="503.44870760066317"/>
+</decayedShown>
+</component>
+<component name="ProjectColorInfo">{ "associatedIndex": 3, "fromUser": false }</component>
+<component name="ProjectId" id="3Jwi53Ds4YcihP4bftnJkslJCEU"/>
+<component name="ProjectLevelVcsManager">
+<ConfirmationsSetting value="1" id="Add"/>
+</component>
+<component name="ProjectViewState">
+<option name="hideEmptyMiddlePackages" value="true"/>
+<option name="showLibraryContents" value="true"/>
+</component>
+<component name="PropertiesComponent">{ "keyToString": { "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true", "ModuleVcsDetector.initialDetectionPerformed": "true", "Python.app.executor": "Run", "RunOnceActivity.ShowReadmeOnStart": "true", "RunOnceActivity.git.unshallow": "true", "RunOnceActivity.typescript.service.memoryLimit.init": "true", "codeWithMe.voiceChat.enabledByDefault": "false", "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true", "git-widget-placeholder": "main", "ignore.virus.scanning.warn.message": "true", "junie.onboarding.icon.badge.shown": "true", "last_opened_file_path": "C:/Users/szhadjii/TicTacToe4AFP", "node.js.detected.package.eslint": "true", "node.js.detected.package.tslint": "true", "node.js.selected.package.eslint": "(autodetect)", "node.js.selected.package.tslint": "(autodetect)", "nodejs_package_manager_path": "npm", "python.packages.toolwindow.project.migrated.to.right.top.v2": "true", "to.speed.mode.migration.done": "true" } }</component>
+<component name="SharedIndexes">
+<attachedChunks>
+<set>
+<option value="bundled-python-sdk-73a66231627c-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.10968.92"/>
+</set>
+</attachedChunks>
+</component>
+<component name="TaskManager">
+<task active="true" id="Default" summary="Default task">
+<changelist id="67d7bfe7-68db-4349-afcd-b7cdd27abbb2" name="Changes" comment=""/>
+<created>1790578344803</created>
+<option name="number" value="Default"/>
+<option name="presentableId" value="Default"/>
+<updated>1790578344803</updated>
+<workItem from="1790578345810" duration="2023000"/>
+<workItem from="1790594340861" duration="560000"/>
+<workItem from="1790609770243" duration="2715000"/>
+<workItem from="1790750392715" duration="5277000"/>
+<workItem from="1790779181710" duration="611000"/>
+<workItem from="1790781923522" duration="2595000"/>
+<workItem from="1790799257126" duration="574000"/>
+<workItem from="1790922244744" duration="2800000"/>
+<workItem from="1791135899208" duration="2148000"/>
+<workItem from="1791138625194" duration="1126000"/>
+<workItem from="1791173727915" duration="319000"/>
+</task>
+<task id="LOCAL-00001" summary="created app.py and app variable">
+<option name="closed" value="true"/>
+<created>1790578857819</created>
+<option name="number" value="00001"/>
+<option name="presentableId" value="LOCAL-00001"/>
+<option name="project" value="LOCAL"/>
+<updated>1790578857819</updated>
+</task>
+<option name="localTasksCounter" value="2"/>
+<servers/>
+</component>
+<component name="TypeScriptGeneratedFilesManager">
+<option name="version" value="3"/>
+</component>
+<component name="VcsManagerConfiguration">
+<MESSAGE value="created app.py and app variable"/>
+<option name="LAST_COMMIT_MESSAGE" value="created app.py and app variable"/>
+</component>
+<component name="com.intellij.coverage.CoverageDataManagerImpl">
+<SUITE FILE_PATH="coverage/TicTacToe4AFP$app.coverage" NAME="app Coverage Results" MODIFIED="1791138867563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backend"/>
+</component>
 </project>
