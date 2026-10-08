@@ -4,23 +4,20 @@
 (function () {
   "use strict";
 
-  // ---------- Beállítások (ha a backend mezőnevei mások, itt kell átírni) ----------
+  
   const API = {
     newGame: "/new-game",
     turn: "/turn",
     state: "/state",
   };
 
-  // A backend által küldött státuszértékek normalizálása belső kódokra.
-  // Több lehetséges írásmódot is elfogadunk, hogy API.md-től függetlenül működjön.
   const STATUS_MAP = {
     "folyamatban": "playing", "in_progress": "playing", "playing": "playing", "ongoing": "playing",
-    "x nyert": "x_won", "x_won": "x_won", "x_win": "x_won", "x_wins": "x_won",
-    "o nyert": "o_won", "o_won": "o_won", "o_win": "o_won", "o_wins": "o_won",
+    "x nyert": "x_won", "x_won": "x_won", "x_win": "x_won", "x_wins": "x_won", "x won!": "x_won",
+    "o nyert": "o_won", "o_won": "o_won", "o_win": "o_won", "o_wins": "o_won", "o won!": "o_won",
     "döntetlen": "draw", "dontetlen": "draw", "draw": "draw", "tie": "draw",
   };
 
-  // F-10: hibaüzenetek
   const MSG = {
     occupied: "Ez a mező már foglalt.",
     gameOver: "A játék véget ért. Indíts új játékot.",
@@ -30,7 +27,6 @@
     generic: "Ismeretlen hiba történt. Próbáld újra.",
   };
 
-  // ---------- Állapot ----------
   const game = {
     table: [],
     size: 3,
@@ -40,7 +36,6 @@
   };
   let busy = false; // kérés közben ne lehessen duplán kattintani
 
-  // ---------- DOM ----------
   const $ = (id) => document.getElementById(id);
   const boardEl = $("board");
   const statusEl = $("status-bar");
@@ -49,7 +44,6 @@
   const resultTextEl = $("result-text");
   const sizeSelect = $("size-select");
 
-  // ---------- Segédfüggvények ----------
   function normalizeStatus(s) {
     if (s === undefined || s === null) return "playing";
     return STATUS_MAP[String(s).trim().toLowerCase()] || "playing";
@@ -60,7 +54,6 @@
     return s === "X" || s === "O" ? s : "";
   }
 
-  // winning_fields lehet [[r,c], ...] vagy [{row, column}, ...]
   function normalizeWinning(list) {
     if (!Array.isArray(list)) return [];
     return list
@@ -74,7 +67,6 @@
       .filter(Boolean);
   }
 
-  // A backend válaszát beolvassuk a belső állapotba
   function applyServerState(data, fallbackSize) {
     if (Array.isArray(data.table)) {
       game.table = data.table.map((row) => row.map(normalizeCell));
@@ -94,13 +86,11 @@
     if (code.includes("range") || code.includes("bounds") || code.includes("coord")) return MSG.outOfRange;
     if (code.includes("size") || code.includes("meret")) return MSG.badSize;
 
-    // Ha a hibakód nem árulkodó, a HTTP státusz és a játék állapota alapján döntünk
     if (httpStatus === 409) return game.status !== "playing" ? MSG.gameOver : MSG.occupied;
     if (httpStatus === 400) return MSG.outOfRange;
     return MSG.generic;
   }
 
-  // ---------- Hálózat ----------
   async function request(url, options) {
     let res;
     try {
@@ -127,7 +117,6 @@
       body: JSON.stringify(payload),
     });
 
-  // ---------- Megjelenítés ----------
   function markHTML(player) {
     const cls = player === "X" ? "mark-x" : "mark-o";
     return `<span class="mark ${cls}">${player}</span>`;
@@ -137,7 +126,6 @@
     return game.winning.some((f) => f.r === r && f.c === c);
   }
 
-  // F-02: tábla kirajzolása
   function renderBoard() {
     const n = game.size;
     boardEl.style.setProperty("--size", n);
@@ -167,7 +155,6 @@
     }
   }
 
-  // F-05 + F-09: állapotsor és eredményüzenet
   function renderStatus() {
     const s = game.status;
     if (s === "playing") {
@@ -190,7 +177,6 @@
     renderStatus();
   }
 
-  // F-10: hibaüzenet kezelése
   function showError(message) {
     errorEl.textContent = message;
     errorEl.hidden = false;
@@ -201,8 +187,6 @@
     errorEl.textContent = "";
   }
 
-  // ---------- Műveletek ----------
-  // F-01 / F-09: új játék
   async function startNewGame(size) {
     if (busy) return;
     busy = true;
@@ -219,7 +203,6 @@
     }
   }
 
-  // F-03: lépés
   async function makeMove(row, column) {
     if (busy) return;
     busy = true;
@@ -235,7 +218,6 @@
     }
   }
 
-  // F-08: állapot lekérdezése (betöltéskor)
   async function loadState() {
     try {
       const data = await request(API.state);
@@ -254,7 +236,6 @@
     }
   }
 
-  // ---------- Eseménykezelők ----------
   boardEl.addEventListener("click", (ev) => {
     const cell = ev.target.closest(".cell");
     if (!cell || cell.disabled) return;
@@ -263,7 +244,6 @@
 
   $("new-game-btn").addEventListener("click", () => startNewGame(sizeSelect.value));
 
-  // UC-06: újrajátszás azonos mérettel
   $("replay-btn").addEventListener("click", () => startNewGame(game.size));
 
   loadState();
