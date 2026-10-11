@@ -1,4 +1,4 @@
-WIN_LENGTH = {3: 3}
+WIN_LENGTH = {3: 3, 5: 4}
 SIZES = tuple(WIN_LENGTH)
 DIRECTIONS = ((0, 1), (1, 0), (1, 1), (1, -1))
 
@@ -36,7 +36,7 @@ class Game:
         winner = self._winning_field(sign)
         if winner:
             self.status = f"{sign} won!"
-            self.winning_fields.append(winner)
+            self.winning_fields = winner
         elif all(field != "" for rowlist in self.table for field in rowlist):
             self.status = "draw"
         else:

@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  
+
   const API = {
     newGame: "/new-game",
     turn: "/turn",
@@ -84,8 +84,7 @@
     if (code.includes("occupied") || code.includes("foglalt")) return MSG.occupied;
     if (code.includes("over") || code.includes("ended") || code.includes("vege")) return MSG.gameOver;
     if (code.includes("range") || code.includes("bounds") || code.includes("coord")) return MSG.outOfRange;
-    if (code.includes("size") || code.includes("meret")) return MSG.badSize;
-
+    if (code.includes("size") || code.includes("meret") || code.includes("méret")) return MSG.badSize;
     if (httpStatus === 409) return game.status !== "playing" ? MSG.gameOver : MSG.occupied;
     if (httpStatus === 400) return MSG.outOfRange;
     return MSG.generic;
